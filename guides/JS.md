@@ -381,10 +381,10 @@ For jQuery plugins, stick to [this pattern](https://github.com/umdjs/umd/blob/ma
 
     ```javascript
     // bad
-    var sidebar = $('.sidebar');
+    var sidebar = $( '.sidebar' );
 
     // good
-    var $sidebar = $('.sidebar');
+    var $sidebar = $( '.sidebar' );
     ```
 
 * Cache jQuery lookups.
@@ -392,18 +392,18 @@ For jQuery plugins, stick to [this pattern](https://github.com/umdjs/umd/blob/ma
     ```javascript
     // bad
     function setSidebar() {
-      $('.sidebar').hide();
+      $( '.sidebar' ).hide();
 
       // ...stuff...
 
-      $('.sidebar').css({
+      $( '.sidebar' ).css({
         'background-color': 'pink'
       });
     }
 
     // good
     function setSidebar() {
-      var $sidebar = $('.sidebar');
+      var $sidebar = $( '.sidebar' );
       $sidebar.hide();
 
       // ...stuff...
@@ -422,16 +422,16 @@ For jQuery plugins, stick to [this pattern](https://github.com/umdjs/umd/blob/ma
     $('ul', '.sidebar').hide();
 
     // bad
-    $('.sidebar').find('ul').hide();
+    $( '.sidebar' ).find( 'ul' ).hide();
 
     // good
-    $('.sidebar ul').hide();
+    $( '.sidebar ul' ).hide();
 
     // good
-    $('.sidebar > ul').hide();
+    $( '.sidebar > ul' ).hide();
 
     // good
-    $sidebar.find('ul').hide();
+    $sidebar.find( 'ul' ).hide();
     ```
 
 [top](#top)
