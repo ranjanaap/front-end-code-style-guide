@@ -349,18 +349,34 @@ function returnLate( foo ) {
 <a name="jquery"></a>
 ### 6. jQuery Usage
 
-#### A. jQuery Object Caching
-
-TBD
-
-
 ### B. jQuery Plug-ins & Widgets
 
 For jQuery plugins, stick to [this pattern](https://github.com/umdjs/umd/blob/master/jqueryPlugin.js).
 
-### C. Misc
+### C. jQuery Best Practices
 
 * Use $.on() as opposed to $.bind(), $.live(), or $.delegate() for generic event binding, whether direct or delegated.
+
+    ```javascript
+    //event binding
+
+    //bad
+    $( '#dataTable tbody tr' ).on( 'click', function() {
+      console.log( $( this ).text() );
+    });
+
+    //better - this also works as live/delegate binding for trs
+    $( '#dataTable tbody' ).on( 'click', 'tr', function() {
+      console.log( $( this ).text() );
+    });
+
+    //best 
+    $( '#dataTable' ).find( 'tbody' ).on( 'click', 'tr', function() {
+      console.log( $( this ).text() );
+    });
+
+    ```
+
 * Prefix jQuery object variables with a `$`.
 
     ```javascript
