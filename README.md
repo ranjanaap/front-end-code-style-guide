@@ -1,4 +1,5 @@
 #Style Guides
+* [HTML](guides/HTML.md)
 * [CSS](guides/CSS.md)
 * [Javascript](guides/JS.md)
 
