@@ -349,11 +349,11 @@ function returnLate( foo ) {
 <a name="jquery"></a>
 ### 6. jQuery Usage
 
-### B. jQuery Plug-ins & Widgets
+### A. jQuery Plug-ins & Widgets
 
 For jQuery plugins, stick to [this pattern](https://github.com/umdjs/umd/blob/master/jqueryPlugin.js).
 
-### C. jQuery Best Practices
+### B. jQuery Best Practices
 
 * Use $.on() as opposed to $.bind(), $.live(), or $.delegate() for generic event binding, whether direct or delegated.
 
