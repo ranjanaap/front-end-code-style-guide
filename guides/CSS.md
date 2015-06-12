@@ -1,4 +1,4 @@
-## Table of contents
+## CSS - Table of contents
 
 1. [General principles](#general-principles)
 2. [Whitespace](#whitespace)
